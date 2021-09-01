@@ -1,0 +1,6 @@
+library(leaflet)
+leaflet()%>%
+setView(lng=121.783928,lat = 31.130227,zoom=16)%>%
+addProviderTiles("OpenStreetMap.Mapnik",group = "street")%>%
+addProviderTiles("Esri.WorldImagery",group = "Imagery")%>%
+addLayersControl(baseGroups = c("Gaode","Imagery"),options = layersControlOptions(collapsed = FALSE))
